@@ -1,0 +1,25 @@
+﻿@using TravelSite.Models.Siniflar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaMenu.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            @*<h3>About</h3>*@
+
+            <h3 class="btn-info">Hakkımızda</h3>
+            <p>
+                @foreach (var i in Model)
+                {
+                    <r />
+                    <img src="~/web/images/ball-shaped-blur-close-up-focus-346885-1080x635.jpg" alt="" />
+                    @i.Aciklama
+                }
+            </p>
+        </div>
+    </div>
+</div>
+
