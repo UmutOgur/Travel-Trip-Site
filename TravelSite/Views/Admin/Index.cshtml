@@ -1,0 +1,32 @@
+﻿@using TravelSite.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog Listesi</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
+        <th>DETAYLAR</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+
+
+        <tr>
+            <td>@i.ID</td>
+            <td>@i.Baslik</td>
+            <td><a href="/Admin/BlogGetir/@i.ID" class="btn btn-success">Güncelleme</a></td>
+            <td><a href="/Admin/BlogSil/@i.ID" class="btn btn-danger">Sil</a></td><td>
+            <a href="/Blog/BlogDetay/@i.ID" class="btn btn-info">Detaylar</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Admin/YeniBlog/" class="btn btn-info">Yeni Blog Ekle</a> 

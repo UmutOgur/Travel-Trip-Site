@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "İletisim";
+    Layout = "~/Views/Shared/_AnaMenu.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | Contact :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact-top">
+                <h3>İletişim Bilgisi</h3>
+                <p>Bu alanda duygu ve düşüncelerinizi bizimle paylaşmak için iletişime geçebilirsiniz..</p>
+            </div>
+            <div class="form">
+                @using (Html.BeginForm("İletisim", "AnaMenu", FormMethod.Post))
+                {
+                    <div>
+                        <input type="text" name="AdSoyad" class="textbox" value="AD:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                    </div>
+                    <div>
+                        <input type="text" name="Mail" class="textbox" value="Mail:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                    </div>
+                    <div>
+                        <input type="text" name="Konu" class="textbox" value="Konu:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">
+                    </div>
+                    <div>
+
+                    </div>
+                    <div class="form1">
+                        <div>
+                            <textarea value="Mesaj:" name="Mesaj" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="GÖNDER" />
+                }
+            </div>
+            <div class="clear"></div>
+            <div class="contact-bottom">
+                <div class="contact-left">
+                    <div class="contact-add">
+                        <h3>1.Adres</h3>
+                        <p> İstanbul/Başakşehir.</p>
+                        <p>Telefon:0(212) 444 444</p>
+                        <p>Fax:1-22-5555</p>
+                        <p>Mail:<a href="mailto:umut.ogur13@gmail.com">umut.ogur13@gmial.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe width="580" height="250" frameborder="0" scrolling="no" marginheight="10" marginwidth="10" src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Rashelle+Way,+San+Ramon,+CA,+United+States&amp;aq=0&amp;oq=rash&amp;sll=44.308127,-111.75293&amp;sspn=22.280521,53.569336&amp;ie=UTF8&amp;hq=&amp;hnear=Rashelle+Way,+San+Ramon,+Contra+Costa,+California+94582,+United+States&amp;ll=37.768294,-121.922369&amp;spn=0.001503,0.00327&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br><small><a href="http://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Rashelle+Way,+San+Ramon,+CA,+United+States&amp;aq=0&amp;oq=rash&amp;sll=44.308127,-111.75293&amp;sspn=22.280521,53.569336&amp;ie=UTF8&amp;hq=&amp;hnear=Rashelle+Way,+San+Ramon,+Contra+Costa,+California+94582,+United+States&amp;ll=37.768294,-121.922369&amp;spn=0.001503,0.00327&amp;t=m&amp;z=14&amp;iwloc=A" style="color: #555;text-align:left">Haritada Görüntüle</a></small>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
-﻿@using TravelSite.Models.Siniflar
-@model List<Blog>
+﻿@model TravelSite.Models.Siniflar.BlogYorum
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AnaMenu.cshtml";
@@ -41,14 +41,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/W
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
-                @foreach (var i in Model)
+                @foreach (var i in Model.Deger1)
                 {
                     <div class="single-grid">
                         <a class=" btn-default" href="/Blog/BlogDetay/@i.ID"><h1>@i.Baslik</h1></a>
                         <img src="@i.BlogImage" alt="" />
                         <h1>   </h1>
                         <p>
-                            @i.Aciklama   
+                            @i.Aciklama
                         </p>
                     </div>
                     <br /><br />
@@ -59,21 +59,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/W
             <div class="col-md-4 side-content">
                 <div class="recent">
                     <h3>SON BLOGLAR</h3>
-                    <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                        <li><a href="#">Nunc dignissim risus consecu</a></li>
-                        <li><a href="#">Cras ornare tristiqu</a></li>
-                    </ul>
+                    @foreach (var y in Model.Deger3)
+                    {
+                        <ul>
+                            <li><a href="/Blog/BlogDetay/@y.ID">@y.Baslik</a></li>
+                        </ul>
+                    }
                 </div>
-                <div class="comments">
+                @*<div class="comments">
                     <h3>SON YORUMLAR</h3>
                     <ul>
                         <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
                         <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
                         <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
                     </ul>
-                </div>
+                </div>*@
 
             </div>
         </div>
